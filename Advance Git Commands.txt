@@ -1,0 +1,41 @@
+1. Cherry Pick:
+Cherry picking involves selecting a specific commit from one branch and applying it to another. This can be useful when you want to bring changes from one branch to another without merging the entire branch.. 
+To cherry-pick a commit, we can use the command:
+--  git checkout main
+--  git cherry-pick <commit-hash>
+
+
+2. Rebase:
+Rebase is a way to incorporate changes from one branch onto another by moving or reapplying commits. It can help create a linear history and avoid merge commit clutter. However, it rewrites commit history, which can be problematic if shared with others.
+
+To perform a rebase:
+   git checkout feature-advanced-demo
+   git rebase main
+
+
+3. Stash:
+Stashing allows you to temporarily save your changes without committing them. This is useful when you need to switch to a different branch for a quick fix, and you don't want to commit incomplete work.
+
+To stash and apply changes:
+   git stash
+   # Do other work
+   git stash apply
+
+
+4. Reset:
+Reset moves the branch pointer to a specific commit, effectively changing the state of the branch. There are three types of reset:
+
+    --soft: Moves the branch pointer only, keeping changes staged.
+    --mixed: Moves the branch pointer and unstages changes, preserving them in the working directory.
+    --hard: Moves the branch pointer, unstages changes, and discards them from the working directory.
+
+To reset to a specific commit:
+   git reset <commit-hash> --hard
+
+
+5. Git Diff:
+Git diff shows the differences between two versions of a file. You can use it to compare changes between commits, branches, or the working directory. It helps you understand what's been added, modified, or removed.
+
+To perform Git Diff:
+--  git AdvanceGitCommands.txt
+
